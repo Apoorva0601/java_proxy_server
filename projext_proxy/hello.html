@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Personalized Greeting</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: #f4f7fc;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #4a90e2;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 1.2em;
+      color: #4a90e2;
+      margin-bottom: 20px;
+    }
+
+    .greeting {
+      font-size: 1.5em;
+      margin-top: 20px;
+      color: #5c6bc0;
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      font-size: 1em;
+      width: 80%;
+      max-width: 300px;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+      margin: 10px 0;
+      outline: none;
+    }
+
+    input[type="text"]:focus {
+      border-color: #4a90e2;
+    }
+
+    button {
+      padding: 12px 24px;
+      font-size: 1.1em;
+      border: none;
+      background-color: #4a90e2;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #357abd;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 15px;
+      font-size: 0.9em;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Welcome to a Beautiful Journey!</h1>
+
+  <p>We believe every moment is special. Enter your name, and let us greet you with warmth and kindness.</p>
+
+  <input type="text" id="nameInput" placeholder="What's your name?" />
+  <button onclick="greetUser()">Submit</button>
+
+  <p class="greeting" id="greetingMessage"></p>
+
+  <footer>
+    &copy; 2025 Beautiful Moments. All rights reserved.
+  </footer>
+
+  <script>
+    function greetUser() {
+      var name = document.getElementById("nameInput").value;
+      var greetingMessage = document.getElementById("greetingMessage");
+
+      if (name) {
+        greetingMessage.innerHTML = "Hello, " + name + "! 🌸 Wishing you a day filled with joy and smiles.";
+      } else {
+        greetingMessage.innerHTML = "Please enter your name to receive a warm greeting.";
+      }
+    }
+  </script>
+
+</body>
+</html>
